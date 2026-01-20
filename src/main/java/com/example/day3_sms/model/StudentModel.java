@@ -6,13 +6,13 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
+@Data   //lonbok dependancy se aata h
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(collection="students")
 public class StudentModel {
 
-    @Id
+    @Id  //it is for primary key here it is ID
     private String id;
     private String name;
     private int age;
