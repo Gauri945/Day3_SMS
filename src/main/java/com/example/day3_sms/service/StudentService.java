@@ -67,7 +67,7 @@ public class StudentService {
 //        return repository.save(existingStudent);
 //    }
 
-    public StudentResponseDto updateStudent(String id, StudentModel student){
+    public StudentResponseDto updateStudent(String id, StudentRequestDto student){
         StudentModel existingStudent = repository.findById(id)
                 .orElseThrow(() -> new StudentNotFoundException("No Student found"));
         existingStudent.setName(student.getName());
